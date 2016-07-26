@@ -1,0 +1,16 @@
+@actionbar-height: @default-bar-height;
+.actionbar  {
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+
+	& > &-item {
+		display: table-cell;
+		height: @actionbar-height;
+		text-align: center;
+		vertical-align: middle;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dial</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet/less" href="css/style.all.less">
+
+		<script src="js/vendor/less.min.js"></script>
+    </head>
+    <body>
+		<div class="app" id="app">
+			<div class="barview anchor-bottom">
+				<div class="barview-content" id="subview"></div>
+				<div class="barview-bar">
+					<div class="actionbar app-actionbar">
+						<a href="#app/favorites" class="js-route actionbar-item">
+							<i class="fa fa-star"></i><br>
+							个人收藏
+						</a>
+						<a href="#app/reccent"  class="js-route actionbar-item">
+							<i class="fa fa-heart"></i><br>
+							最近通话
+						</a>
+						<a href="#app/contacts" class="js-route actionbar-item">
+							<i class="fa fa-user-md"></i><br>
+							通讯录
+						</a>
+						<a href="#app/dialer" class="js-route actionbar-item">
+							<i class="fa fa-qq"></i><br>
+							拨号键盘
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/vendor/require.js" data-main="js/main"></script>
+    </body>
+</html>

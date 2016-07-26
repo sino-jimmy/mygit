@@ -1,0 +1,60 @@
+<div class="mdview-wrapper">
+	<div class="mdview-childview">
+		<div class="barview">
+			<div class="barview-bar contacts-bar">
+				<strong>通讯录列表</strong>
+				<div class="contacts-new js-add">
+					<i class="fa fa-plus"></i>
+				</div>
+			</div>
+			<div class="barview-content">
+				<div class="contacts-content">
+					<%
+						var len = items.length;
+						if (len > 0) {
+					%>
+						<%
+							var item;
+							for(var i=0;i<len;i++) {
+								item = items[i];
+						%>
+								<div class="contacts-item js-next" data-id="<%= item.id%>">
+									<div class="contacts-info">
+										<strong><%= item.name%></strong>
+										<br>
+										<%= item.number%>
+									</div>
+									<div class="contacts-arrow info js-edit">
+										<i class="fa fa-pencil-square-o"></i>
+									</div>
+									<div class="contacts-arrow remove js-remove">
+										<i class="fa fa-minus-circle"></i>
+									</div>
+								</div>
+						<% } %>
+					<% } else { %>
+						<div class="contacts-empty">无</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mdview-childview">
+		<div class="barview">
+			<div class="barview-bar contacts-bar">
+				<div class="contacts-back js-back">
+					<i class="fa fa-chevron-left"></i>
+				</div>
+				<strong>信息修改</strong>
+			</div>
+			<div class="barview-content">
+				<form class="contacts-form" onsubmit="return false;">
+					<input class="contacts-input" type="text" id="edit_name" name="name" placeholder="Username"/>
+					<input class="contacts-input" type="text" id="edit_number" name="number" placeholder="Number"/>
+					
+					<button class="contacts-button js-save">Save</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

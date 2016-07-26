@@ -1,0 +1,37 @@
+@barview-bar-height: @default-bar-height;
+@barview-bar-bgcolor: #f1f1f1;
+@barview-bar-border-color: #ccc;
+.barview {
+	@bar-height: @barview-bar-height + 1px;
+
+	&:extend(.fill);
+	.box-sizing(border-box);
+	position: relative;
+	padding: @bar-height 0 0;
+	
+	& > &-bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: @barview-bar-height;
+		background: @barview-bar-bgcolor;
+		border-bottom: 1px solid @barview-bar-border-color;
+	}
+
+	& > &-content {
+		&:extend(.fill);
+		overflow: auto;
+	}
+
+	&.anchor-bottom {
+		padding: 0 0 @bar-height;
+	}
+
+	&.anchor-bottom > &-bar {
+		border-bottom: none;
+		border-top: 1px solid @barview-bar-border-color;
+		top: auto;
+		bottom: 0;
+	}
+}
